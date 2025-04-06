@@ -1,3 +1,4 @@
+# Laravel & Node.js
 /.phpunit.cache
 /bootstrap/ssr
 /node_modules
@@ -7,18 +8,31 @@
 /storage/*.key
 /storage/pail
 /vendor
+
+# 環境ファイルなど
 .env
 .env.backup
 .env.production
 .phpactor.json
 .phpunit.result.cache
+auth.json
+
+# 開発環境ファイル
 Homestead.json
 Homestead.yaml
-npm-debug.log
-yarn-error.log
-/auth.json
 /.fleet
 /.idea
 /.nova
 /.vscode
 /.zed
+/.vagrant
+
+# GitHubのテンプレート由来
+npm-debug.log
+yarn-error.log
+
+# 古いLaravel用（保守的に残すなら）
+public_html/storage
+public_html/hot
+bootstrap/compiled.php
+app/storage/
