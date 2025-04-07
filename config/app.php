@@ -128,9 +128,9 @@ return [
      | Service Providers$
      |-----------------------------------------------------------------------
      |$
-     */
+     
     'providers' => [
         App\Providers\SampleServiceProvider::class,
     ],
-
+     */
 ];
