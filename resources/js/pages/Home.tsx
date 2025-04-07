@@ -11,6 +11,7 @@ export default function Home({ user }: Props) {
         <div>
           <h1>こんにちは、{user.name}さん！</h1>
           <p>Laravel + Inertia.js + React の世界へようこそ!</p>
+          <a href="/auth/login">WorkOSでログイン</a>
         </div>
     );
 }

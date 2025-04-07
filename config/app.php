@@ -128,9 +128,17 @@ return [
      | Service Providers$
      |-----------------------------------------------------------------------
      |$
-     
-    'providers' => [
-        App\Providers\SampleServiceProvider::class,
-    ],
      */
+    /*
+    'providers' => [
+        Illuminate\Filesystem\FilesystemServiceProvider::class,
+        WorkOs\Laravel\WorkOSServiceProvider::class,
+    ],
+
+    'aliases' => [
+        'App' => Illuminate\Support\Facades\App::class,
+        'File' => Illuminate\Support\Facades\File::class,
+        'WorkOS' => WorkOS\Laravel\Facades\WorkOS::class,
+    ],
+    */ 
 ];
