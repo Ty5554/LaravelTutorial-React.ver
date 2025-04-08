@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return Inertia::render('welcome');
@@ -12,6 +13,8 @@ Route::get('/', function () {
     'user' => auth()->user() ?? ['name' => 'ゲスト'],
     ]);
 });
+
+Route::get('/posts', [PostController::class, 'index']);
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
