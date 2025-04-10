@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Head, useForm } from '@inertiajs/react';
+import { Link } from '@inertiajs/react'
 
 type Post = {
     id: number;
@@ -72,6 +73,12 @@ export default function Index({ posts, errors }: Props) {
             <div key={post.id} className="mb-6 border-b pb-4">
               <h2 className="text-xl font-semibold">{post.title}</h2>
               <p>{post.body}</p>
+              <Link
+                href={route('posts.edit', post.id)}
+                className="text-blue-500 underline"
+              >
+                編集
+              </Link>
             </div>
         ))
       )}
