@@ -28,4 +28,24 @@ class PostController extends Controller
 
         return redirect()->route('posts.index');
     }
+
+    public function edit(Post $post)
+    {
+        return Inertia::render('Posts/Edit', [
+        'post' => $post
+        ]);
+    }
+
+    public function update(Request $request, Post $post)
+    {
+        $validated = $request->validate([
+            'title' => 'required|string|max:255',
+            'body' => 'required|string',
+        ]);
+
+        $post->update($validated);
+
+        return redirect()->route('posts.index')
+                         ->with('success', '投稿が更新されました');
+    }
 }
